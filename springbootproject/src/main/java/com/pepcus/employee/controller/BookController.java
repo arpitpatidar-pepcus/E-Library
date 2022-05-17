@@ -18,9 +18,9 @@ public class BookController {
   @Autowired
   private BookService bookService;
   
-  @PostMapping("/")
-  public List<Books> saveBooks(@RequestBody List<Books> books) {    
-    return bookService.addBooks(books);
-  } 
+//  @PostMapping("/")
+//  public List<Books> saveBooks(@RequestBody List<Books> books) {    
+//    return bookService.addBooks(books);
+//  } 
  
 }

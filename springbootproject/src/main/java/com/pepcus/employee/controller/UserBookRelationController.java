@@ -6,20 +6,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pepcus.employee.entities.User;
-import com.pepcus.employee.service.UserService;
+import com.pepcus.employee.entities.UserBookRelation;
+import com.pepcus.employee.service.UserBookRelationService;
 
 @RestController
-@RequestMapping(value = "/user")
-public class UserController {
+@RequestMapping(value = "/issuebook")
+public class UserBookRelationController {
 
   @Autowired
-  private UserService userService;
-   
-  @PostMapping("/")
-  public User registerUser(@RequestBody User user) {
-    System.out.println("git test line");
-    return userService.addUser(user);
+  private UserBookRelationService userBookRelationService;
 
+  @PostMapping("/")
+  public String registerUser(@RequestBody UserBookRelation userBookRelation) {
+    System.out.println("git test line");
+
+    return userBookRelationService.bookUpdate(userBookRelation);
   }
 }

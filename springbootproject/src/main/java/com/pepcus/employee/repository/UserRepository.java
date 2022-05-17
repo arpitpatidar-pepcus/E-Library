@@ -10,7 +10,7 @@ import com.pepcus.employee.entities.User;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer>{
 //value="update USER_REGISTRATION set password = :password WHERE user_name = :user_name and email = :email",nativeQuery=true)
-//  @Query(value = "update LibraryUser set deregister ='YES' where id = :id",nativeQuery=true)
-//  public void deregisterUser(@Param("id") int id);
+  @Query(value = "update LibraryUser set deregister ='YES' where id = :id",nativeQuery=true)
+  public void updateDeregister(@Param("id") int id);
 
 }
